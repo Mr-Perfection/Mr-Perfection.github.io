@@ -128,7 +128,7 @@
             width: 100%;
         }
 
-        /* Hero Section */
+       /* Hero Section */
         .hero {
             min-height: 100vh;
             display: flex;
@@ -166,7 +166,27 @@
         .hero .subtitle {
             font-size: 1.5rem;
             color: var(--text-dim);
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hero-profile {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 2rem;
+            border-radius: 50%;
+            box-shadow: 0 15px 35px rgba(99, 102, 241, 0.3);
+        }
+
+        .hero-profile img {
+            border-radius: 50%;
+        }
+
+        .hero-about {
+            max-width: 600px;
+            margin: 0 auto;
+            color: var(--text-dim);
+            font-size: 1.1rem;
+            line-height: 1.8;
         }
 
         .hero-buttons {
@@ -483,27 +503,12 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
+            <div class="profile-img hero-profile">
+                <img src="profile-photo.jpg" alt="Stephen S. Lee">
+            </div>
             <h1>Hello, I'm Steph.</h1>
-            <p class="subtitle"> </p>
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">Learn More</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="fade-in">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-            <div class="about-image">
-                <div class="profile-img">
-                    <img src="profile-photo.jpg" alt="Stephen S. Lee">
-                </div>
-            </div>
-            <div class="about-text">
-                <p>I love building software and exploring the wildreness.</p>
-                <p>You can find me at tech events, tennis courts, or in the middle of the ocean (probably surfing or spearfishing).</p>
+                <p class="hero-about"></p>I love building software and exploring the wildreness. You can find me at tech events, tennis courts, or in the middle of the ocean (probably surfing or spearfishing).</p>
             </div>
         </div>
     </section>
