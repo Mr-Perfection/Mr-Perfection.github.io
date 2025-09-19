@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mr. Perfection - Portfolio</title>
+    <title>Stephen S. Lee - Portfolio</title>
     <style>
         * {
             margin: 0;
@@ -241,14 +241,16 @@
             width: 250px;
             height: 250px;
             border-radius: 20px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 5rem;
-            color: white;
             position: relative;
             overflow: hidden;
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.3);
+        }
+
+        .profile-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
         }
 
         .profile-img::before {
@@ -256,8 +258,22 @@
             position: absolute;
             width: 100%;
             height: 100%;
-            background: linear-gradient(135deg, transparent 0%, rgba(255,255,255,0.2) 100%);
+            background: linear-gradient(135deg, transparent 0%, rgba(99, 102, 241, 0.1) 100%);
+            z-index: 1;
             animation: shimmer 3s infinite;
+        }
+
+        .profile-img::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            border-radius: 20px;
+            padding: 2px;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            z-index: -1;
         }
 
         @keyframes shimmer {
@@ -449,12 +465,10 @@
     <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
-            <div class="logo">Mr. Perfection</div>
+            <div class="logo">Stephen S. Lee</div>
             <ul class="nav-links">
                 <li><a href="#home">Home</a></li>
                 <li><a href="#about">About</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -463,10 +477,10 @@
     <!-- Hero Section -->
     <section id="home" class="hero">
         <div class="hero-content">
-            <h1>Hello, I'm Mr. Perfection</h1>
+            <h1>Hello, I'm Steph</h1>
             <p class="subtitle">Full Stack Developer & UI/UX Enthusiast</p>
             <div class="hero-buttons">
-                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#about" class="btn btn-primary">Learn More</a>
                 <a href="#contact" class="btn btn-outline">Get In Touch</a>
             </div>
         </div>
@@ -477,94 +491,14 @@
         <h2 class="section-title">About Me</h2>
         <div class="about-content">
             <div class="about-image">
-                <div class="profile-img">👨‍💻</div>
+                <div class="profile-img">
+                    <img src="profile-photo.jpg" alt="Stephen S. Lee">
+                </div>
             </div>
             <div class="about-text">
                 <p>I'm a passionate developer with a keen eye for detail and a drive for creating perfect digital experiences. With expertise in modern web technologies and a love for clean, efficient code, I bring ideas to life through elegant solutions.</p>
                 <br>
                 <p>My journey in tech has been driven by curiosity and the constant pursuit of excellence. Whether it's crafting beautiful user interfaces or architecting robust backend systems, I approach every project with dedication and creativity.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="fade-in">
-        <h2 class="section-title">Skills & Technologies</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <div class="skill-icon">⚛️</div>
-                <h3>React</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🟨</div>
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🐍</div>
-                <h3>Python</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🎨</div>
-                <h3>UI/UX Design</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">📱</div>
-                <h3>Responsive Design</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🗄️</div>
-                <h3>Databases</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">☁️</div>
-                <h3>Cloud Services</h3>
-            </div>
-            <div class="skill-card">
-                <div class="skill-icon">🔧</div>
-                <h3>DevOps</h3>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="fade-in">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <div class="project-card">
-                <h3 class="project-title">Project Alpha</h3>
-                <p class="project-description">A modern web application built with React and Node.js, featuring real-time data synchronization and beautiful animations.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link">
-                        <span>🔗</span> Live Demo
-                    </a>
-                    <a href="#" class="project-link">
-                        <span>📂</span> GitHub
-                    </a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title">Project Beta</h3>
-                <p class="project-description">An innovative mobile-first platform that revolutionizes user engagement through intuitive design and powerful features.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link">
-                        <span>🔗</span> Live Demo
-                    </a>
-                    <a href="#" class="project-link">
-                        <span>📂</span> GitHub
-                    </a>
-                </div>
-            </div>
-            <div class="project-card">
-                <h3 class="project-title">Project Gamma</h3>
-                <p class="project-description">A comprehensive solution for data visualization and analytics, helping businesses make informed decisions.</p>
-                <div class="project-links">
-                    <a href="#" class="project-link">
-                        <span>🔗</span> Live Demo
-                    </a>
-                    <a href="#" class="project-link">
-                        <span>📂</span> GitHub
-                    </a>
-                </div>
             </div>
         </div>
     </section>
@@ -575,7 +509,7 @@
         <div class="contact-content">
             <p>I'm always interested in hearing about new projects and opportunities. Whether you have a question or just want to say hi, feel free to reach out!</p>
             <div class="social-links">
-                <a href="https://github.com/Mr-Perfection" class="social-link" target="_blank">
+                <a href="https://github.com/Mr-Perfection" class="social-link" target="_blank" title="GitHub">
                     <span>📁</span>
                 </a>
                 <a href="#" class="social-link">
@@ -593,7 +527,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>© 2024 Mr. Perfection. Crafted with ❤️ and lots of ☕</p>
+        <p>© 2024 Stephen S. Lee. Crafted with ❤️ and lots of ☕</p>
     </footer>
 
     <script>
