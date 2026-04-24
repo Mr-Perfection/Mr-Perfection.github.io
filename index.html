@@ -412,6 +412,90 @@
             border-radius: 999px;
         }
 
+        .writing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .writing-card {
+            display: block;
+            text-decoration: none;
+            color: inherit;
+            background: var(--card-bg);
+            border: 1px solid rgba(99, 102, 241, 0.2);
+            border-radius: 15px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .writing-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .writing-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .writing-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(99, 102, 241, 0.2);
+        }
+
+        .writing-label {
+            display: block;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--accent);
+            margin-bottom: 0.75rem;
+        }
+
+        .writing-title {
+            font-size: 1.15rem;
+            color: var(--text-light);
+            margin-bottom: 0.75rem;
+            line-height: 1.4;
+        }
+
+        .writing-excerpt {
+            color: var(--text-dim);
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .writing-date {
+            display: block;
+            font-size: 0.8rem;
+            color: var(--text-dim);
+        }
+
+        .writing-more {
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .writing-more a {
+            color: var(--primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .writing-more a:hover {
+            color: var(--accent);
+        }
+
         .project-links {
             display: flex;
             gap: 1rem;
@@ -581,6 +665,29 @@
                 </div>
             </article>
         </div>
+    </section>
+
+    <!-- Writing Section -->
+    <section id="writing" class="fade-in">
+        <h2 class="section-title">Writing</h2>
+        <div class="writing-grid">
+            <a class="writing-card" href="https://medium.com/towards-artificial-intelligence/openclaw-post-onboarding-skills-apple-integrations-and-google-calendar-the-secure-way-4b4b4e49dfa8?sk=3e0ba8f2273e6f6f671b62f76e11734a" target="_blank" rel="noopener">
+                <span class="writing-label">Towards AI</span>
+                <h3 class="writing-title">OpenClaw Post-Onboarding: Skills, Apple Integrations, and Google Calendar — The Secure Way</h3>
+                <p class="writing-excerpt">Configuring an AI agent with security-focused skills and integrations while maintaining privilege separation between admin and standard user accounts on macOS.</p>
+                <span class="writing-date">Feb 2026</span>
+            </a>
+
+            <a class="writing-card" href="https://medium.com/@stephenslee/build-your-own-personal-voice-ai-assistant-like-alexa-with-openai-gpt3-openai-whisper-and-coqui-6fe4468828e5?sk=5948fe45d41c8f714681f6ca11736f29" target="_blank" rel="noopener">
+                <span class="writing-label">Medium</span>
+                <h3 class="writing-title">Build your own personal voice AI assistant like Alexa with OpenAI GPT-3, Whisper, and Coqui TTS in 5 minutes</h3>
+                <p class="writing-excerpt">Combining GPT-3, Whisper, and Coqui TTS into a working voice assistant in Python.</p>
+                <span class="writing-date">Mar 2023</span>
+            </a>
+        </div>
+        <p class="writing-more">
+            <a href="https://medium.com/@stephenslee" target="_blank" rel="noopener">Read more on Medium →</a>
+        </p>
     </section>
 
     <!-- Socials Section -->
